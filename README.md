@@ -2,7 +2,7 @@
 
 ## Description
 
-The Gesture-to-Location extension allows user to create bookmarks bound to specific gestures. Drawing the gesture causes the browser to load the corresponding page.
+The Gesture-to-Location extension allows user to create bookmarks bound to specific gestures. Drawing a gesture causes the browser to load the corresponding page.
 
 Only one-stroke gestures are supported. Be sure to read the Notes section below for other details about extension use.
 
