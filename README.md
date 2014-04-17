@@ -1,49 +1,35 @@
-Gesture to Location
-===================
+# Gesture to Location
 
-Description
--------------------
+## Description
 
-Gesture to Location is demo extension for Kitt. The purpose of this extension is to allow user to bind gestures to certain action. User can bind gesture to actual page, so that he can get back only by drawing specific gesture.
+The Gesture-to-Location extension allows user to create bookmarks bound to specific gestures. Drawing a gesture causes the browser to load the corresponding page.
 
-Only one stroke gestures are supported. Used library for gesture recognition has several specific, so please read limitations section before use.
+Only one-stroke gestures are supported. Be sure to read the Notes section below for other details about extension use.
 
-Learned gestures are stored in chrome storage, so that they should be remembered even if Kitt process has been killed.
+## Usage
 
-Usage
--------------------
+To store a new gesture:
 
-Learn new action:
+* Open your favorite page in Kitt.
+* Open the one-stroke gesture on the white surface.
+* Save the gesture to bind it to your page.
 
-<ol>
-<li>Visit your favorite page.</li>
-<li>Open browser action page by clicking on extension icon.</li>
-<li>Draw one stroke gesture on displayed white surface.</li>
-<li>Bind your gesture to your favorite page.</li>
-</ol>
+To load a bookmark:
 
-Recall learned action:
+* Open the popup by clicking on the extension icon.
+* Draw an existing one-stroke gesture on the white surface.
+* If the gesture was recognized you will be redirected to the corresponding page.
+* If the gesture was not recognized you can bind the gesture to the current page as described in the previous section.
 
-<ol>
-<li>Open browser action page by clicking on extension icon.</li>
-<li>Draw learned gesture on displayed white surface.</li>
-<li>If gesture was recognized, then you will be redirected to new page.</li>
-<li>If gesture was not recognized, then you can bind gesture to current page.</li>
-</ol>
+To remove a bookmark:
 
-Remove learned action:
+* Open the popup by clicking on the extension icon.
+* Click the on List Gestures button.
+* Click on the bookmark you want to remove.
 
-<ol>
-<li>Open browser action page by clicking on extension icon.</li>
-<li>Click on List gestures button.</li>
-<li>Select gesture, which you want to remove and click on it.</li>
-</ol>
+## Limitations
 
-Limitations
-----------------------
-
-* Only one stroke gestures are supported
-* Sometimes, used algorithm is not able distinguish gestures, which may looks different.
-* Similar gestures, only differently scaled or rotated, are considered same.
-* Page (about:blank is not page) has to be open to get extension working.
-* Pages www.example.com and www.example.com/test are considered different.
+* Only one-stroke gestures are supported.
+* Sometimes the recognition algorithm is not able distinguish gestures that look different to the human eye.
+* Gestures that differ only because they have been scaled or rotated are considered the same.
+* A webpage (not about:blank) has to be open for the extension to work.
