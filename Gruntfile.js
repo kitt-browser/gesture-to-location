@@ -12,6 +12,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-usemin');
   grunt.loadNpmTasks('grunt-bumpup');
   grunt.loadNpmTasks('grunt-crx');
+  grunt.loadNpmTasks('grunt-s3');
 
   // Read extension manifest
   var manifest = grunt.file.readJSON('manifest.json');
@@ -105,7 +106,27 @@ module.exports = function(grunt) {
         dest: DIST,
         filename: manifest.name+'.crx',
         baseURL: 'http://localhost:8777/', // clueless default
-        privateKey: BUILD+'/../key.pem'
+        privateKey: 'key.pem'
+      }
+    },
+
+    s3: {
+      options: {
+        key: process.env.S3_KEY,
+        secret: process.env.S3_SECRET,
+        bucket: process.env.S3_BUCKET,
+        access: 'private',
+        headers: {
+          // Two Year cache policy (1000 * 60 * 60 * 24 * 730).
+          "Cache-Control": "max-age=630720000, public",
+          "Expires": new Date(Date.now() + 63072000000).toUTCString()
+        }
+      },
+      dist: {
+        upload: [{
+          src: DIST + "/*.crx",
+          dest: process.env.S3_FOLDER
+          }]
       }
     }
   });
@@ -119,4 +140,11 @@ module.exports = function(grunt) {
   }
 
   grunt.registerTask('default', ['jshint', 'bumpup', 'exec:bower', 'copy', '_usemin', 'crx']);
+
+  grunt.registerTask('upload', function() {
+    if ( ! process.env.S3_FOLDER ) {
+      grunt.fail.fatal("S3_FOLDER env var not specified");
+    }
+    grunt.task.run(['default', 's3:dist']);
+  });
 };
