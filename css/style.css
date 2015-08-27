@@ -57,13 +57,15 @@ canvas {
   margin: 0;
   height: 32px;
   line-height: 32px;
+  -webkit-transition: all .2s all;
+  transition: all .2s all;
 }
 
 .button-bar li:last-child {
   border-right: 0;
 }
 
-.button-bar li:active, .button-bar li.active, .button-bar li:hover {
+.button-bar li.active {
   background: #157efb;
   color: #fff;
 }
