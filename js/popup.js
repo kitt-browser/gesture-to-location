@@ -10,7 +10,6 @@ $(document).ready(function() {
     var THUMBNAIL_WIDTH = 71;
     var THUMBNAIL_HEIGHT = 71;
     var THUMBNAIL_PADDING = 2;
-    var BODY_PADDING = 5; // px
 
     var Templates = {};
     var dollarRec = new Dollar.Recognizer();
@@ -271,8 +270,8 @@ $(document).ready(function() {
     // Resize main canvas
     var canvasResize = function() {
       var p = $('#content1').offset();
-      document.getElementById('surface').width = $('body').width() - BODY_PADDING - p.left;
-      document.getElementById('surface').height = $('body').height() - BODY_PADDING - p.top;
+      document.getElementById('surface').width = $('body').width() - p.left;
+      document.getElementById('surface').height = $('body').height() - p.top;
     };
 
     // Register on orientation change event
