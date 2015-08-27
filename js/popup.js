@@ -321,16 +321,17 @@ $(document).ready(function() {
         table.appendChild(row);
 
         var cell = document.createElement('div');
+        cell.className = 'canvas';
         row.appendChild(cell);
 
         var canvas = document.createElement('canvas');
         cell.appendChild(canvas);
         canvas.width = THUMBNAIL_WIDTH;
         canvas.height = THUMBNAIL_HEIGHT;
-        canvas.style.border = 'solid 2px white';
         drawGesture(canvas, Templates[template.Name]);
 
         cell = document.createElement('div');
+        cell.className = 'text';
         row.appendChild(cell);
 
         var text = document.createElement('span');

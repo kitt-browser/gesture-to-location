@@ -1,7 +1,7 @@
 {
   "name": "Gesture2Location",
-  "version": "1.5.2",
-  "description": "Gesture to Location is demo extension for Kitt. The purpose of this extension is to allow user to bind gestures to certain action.",
+  "version": "1.5.27",
+  "description": "The Gesture-to-Location extension allows user to create bookmarks bound to specific gestures. Drawing a gesture causes the browser to load the corresponding page.",
   "author": "Jan Dědeček",
   "licenses": [
     {

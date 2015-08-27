@@ -1,38 +1,106 @@
-#items {
-    display: table;
-    min-width: 250px;
-    width: 100%;
-    border-top: 1px solid black;
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent; /* For some Androids */
 }
-#items>div {
-    display: table-row;
+
+html {
+  padding: 0;
+  margin: 0;
 }
-#items>div>div {
-    display: table-cell;
-    vertical-align: middle;
-    border-bottom: 1px solid black;
-}
-canvas {
-    vertical-align: middle;
-}
-#items img {
-    max-height:  75px;
-    padding: 10px;
-    vertical-align: middle;
-}
-html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-}
+
 body {
-    background-color: #e6e6e6;
+  background: #ededf3;
+  padding: 0;
+  margin: 0;
+  font-size: 17px;
+  color: #000;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-.content  {
-    background-color: white;
-    overflow: hidden;
+
+canvas {
+  display: block;
+  background: #fff;
 }
-.text {
-    white-space: pre-wrap;
+
+.button-bar {
+  background: #f8f8f9;
+  padding: 12px 18px;
+  border-bottom: 1px solid #b2b2b2;
+}
+
+.button-bar ul {
+  border: 1px solid #157efb;
+  border-radius: 4px;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 32px;
+}
+
+.button-bar li {
+  display: block;
+  float:left;
+  width: 50%;
+  text-align: center;
+  box-sizing: border-box;
+  border-right: 1px solid #157efb;
+  color: #157efb;
+  padding: 0;
+  margin: 0;
+  height: 32px;
+  line-height: 32px;
+}
+
+.button-bar li:last-child {
+  border-right: 0;
+}
+
+.button-bar li:active, .button-bar li:hover {
+  background: #157efb;
+  color: #fff;
+}
+
+#items {
+  display: table;
+  width: 100%;
+  border-bottom: 1px solid #c8c7cc;
+  background: #fff;
+}
+
+#items > div {
+  display: table-row;
+}
+
+#items > div > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#items > div > div.canvas {
+  width: 71px;
+}
+
+#items > div > div.text {
+  border-bottom: 2px solid #c8c7cc;
+  padding: 0 10px;
+  font-size: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#items > div > div > canvas {
+  padding: 2px;
+}
+
+#items > div:last-child > div {
+  border-bottom: 0;
+}
+
+#items img {
+  max-height:  75px;
+  padding: 10px;
+  vertical-align: middle;
 }

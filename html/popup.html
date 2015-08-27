@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Gestures</title>
-        <link rel="stylesheet" href="../css/button.css"/>
+        <!--<link rel="stylesheet" href="../css/button.css"/>-->
         <link rel="stylesheet" href="../css/style.css"/>
         <!-- build:css ../css/messi.min.css -->
         <link rel="stylesheet" href="../bower_components/messi/messi.min.css"/>
@@ -27,19 +27,19 @@
         <script type="text/javascript" src="../js/popup.js"></script>
         <!-- endbuild -->
     </head>
-    <body style="max-width: 100%;">
-        <div style="padding: 5px;">
-            <div style="display: table; width: 100%;">
-                <div style="display: table-row">
-                    <div style='display: table-cell;' class='button' id='button1'>Draw gesture</div>
-                    <div style='display: table-cell;' class='button' id='button2'>List gestures</div>
-                </div>
-            </div>
-            <div class='content' id='content1' style="display: none">
-                <canvas id='surface'></canvas>
-            </div>
-            <div class='content' id='content2' style="display: none">
-            </div>
-        </div>
+
+    <body>
+      <div class="button-bar">
+        <ul>
+          <li class='button' id='button1'>Draw gesture</li>
+          <li class='button' id='button2'>List gestures</li>
+        </ul>
+      </div>
+
+      <div class='content' id='content1' style="display: none">
+        <canvas id='surface'></canvas>
+      </div>
+
+      <div class='content' id='content2' style="display: none"></div>
     </body>
 </html>
