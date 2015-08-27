@@ -57,7 +57,7 @@ canvas {
   border-right: 0;
 }
 
-.button-bar li:active, .button-bar li:hover {
+.button-bar li:active, .button-bar li.active, .button-bar li:hover {
   background: #157efb;
   color: #fff;
 }

@@ -1,6 +1,6 @@
 {
   "name": "Gesture2Location",
-  "version": "1.5.27",
+  "version": "1.5.28",
   "description": "The Gesture-to-Location extension allows user to create bookmarks bound to specific gestures. Drawing a gesture causes the browser to load the corresponding page.",
   "author": "Jan Dědeček",
   "licenses": [
