@@ -20,6 +20,7 @@ body {
 canvas {
   display: block;
   background: #fff;
+  vertical-align: middle;
 }
 
 .button-bar {
@@ -62,37 +63,51 @@ canvas {
   color: #fff;
 }
 
-#items {
-  display: table;
-  width: 100%;
+#content2 {
+  padding: 0 18px;
   border-bottom: 1px solid #c8c7cc;
   background: #fff;
 }
 
+#items {
+  width: 100%;
+}
+
 #items > div {
-  display: table-row;
+  width: 100%;
+  position: relative;
 }
 
 #items > div > div {
-  display: table-cell;
-  vertical-align: middle;
+  display: block;
 }
 
 #items > div > div.canvas {
-  width: 71px;
-}
-
-#items > div > div.text {
-  border-bottom: 2px solid #c8c7cc;
-  padding: 0 10px;
-  font-size: 15px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+  padding-right: 18px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
 }
 
 #items > div > div > canvas {
-  padding: 2px;
+  padding: 2px 0 4px 0;
+}
+
+#items > div > div.text {
+  height: 77px;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 2px solid #c8c7cc;
+  padding: 30px 0 0 89px;
+  font-size: 15px;
+}
+
+#items > div > div.text span {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
 }
 
 #items > div:last-child > div {
@@ -100,7 +115,7 @@ canvas {
 }
 
 #items img {
-  max-height:  75px;
+  max-height: 75px;
   padding: 10px;
   vertical-align: middle;
 }
